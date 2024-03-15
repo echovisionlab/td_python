@@ -1,3 +1,9 @@
+# stub import examples.
+# noinspection PyUnreachableCode
+if False:
+    # noinspection PyUnresolvedReferences
+    from _stubs import *
+
 import os
 import sys
 

@@ -59,6 +59,8 @@ call .\venv\Scripts\activate.bat
 :: Install Dependencies
 echo installing dependencies using pip...
 powershell -NoProfile -ExecutionPolicy Bypass -Command "python -m pip install --upgrade -r %requirements_dir%"
+
+:: You may ignore these three lines if you don't want the streamdiffusion
 python -m pip install --upgrade torch==2.1.0 torchvision==0.16.0 xformers --index-url https://download.pytorch.org/whl/cu121
 python -m pip install git+https://github.com/cumulo-autumn/StreamDiffusion.git@main#egg=streamdiffusion[tensorrt]
 python -m streamdiffusion.tools.install-tensorrt
